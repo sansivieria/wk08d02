@@ -11,7 +11,10 @@ app.get('/greeting/:name', (req, res) => {
 });
 
 // exercise 2
-
+app.get('/tip/:total/:tipPercentage', (req, res) => {
+  const totalBill = (parseInt(req.params.total, 10))*((parseInt(req.params.tipPercentage, 10))/100);
+  res.send`${totalBill}`;
+});
 // exercise 3
 
 // exercise 4
